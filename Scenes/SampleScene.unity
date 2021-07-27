@@ -218,7 +218,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -253,7 +253,13 @@ MonoBehaviour:
   maxMoveSpeed: 12
   linearDrag: 10
   jumpForce: 12
+  airLinearDrag: 2.5
+  fallMultiplier: 8
+  lowJumpFallMultiplier: 5
+  jumpDelay: 0.15
+  extraJumps: 1
   groundRayCastLength: 1.6
+  groundRaycastOffset: {x: 0, y: 0, z: 0}
 --- !u!50 &376896433
 Rigidbody2D:
   serializedVersion: 4
