@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -22,7 +23,7 @@ public class PlayerController : MonoBehaviour
     public Transform head;
     
     private Rigidbody2D rb;
-    
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -39,6 +40,23 @@ public class PlayerController : MonoBehaviour
     {
         float xDirection = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(xDirection * (movementForce * Time.deltaTime), rb.velocity.y);
+        //animation
+        if (xDirection != 0) head.localScale = new Vector3(xDirection, 1f, 1f);
+        if (xDirection > 0)
+        {
+            anim.SetBool("Walk", true);
+            anim.SetBool("WalkBack", false);
+        }
+        if (xDirection < 0)
+        {
+            anim.SetBool("Walk", false);
+            anim.SetBool("WalkBack", true);
+        }
+        if (xDirection == 0)
+        {
+            anim.SetBool("Walk", false);
+            anim.SetBool("WalkBack", false);
+        }
     }
 
     private void jump()
