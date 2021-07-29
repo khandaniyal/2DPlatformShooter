@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 4039610051153407826}
   - component: {fileID: 4209418190919324943}
   - component: {fileID: -1515308703481145488}
+  - component: {fileID: 1334572677984081898}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -229,3 +230,18 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &1334572677984081898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5558807903125442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 123f7be4185b1b44b91b648864a6d6b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dieEffect: {fileID: 4838404738548813867, guid: 76192b054c0d9564da085bd09ae9cbba, type: 3}
+  damage: 25
+  dieTime: 2

@@ -29,11 +29,11 @@ public class PlayerAimWeapon : MonoBehaviour
         faceMouse();
     */
 
-    if (Time.time > readyNextShot)
-    {
-        readyNextShot = Time.time + 1 / fireRate;
-        shoot();
-    }
+        if (Time.time > readyNextShot)
+        {
+            readyNextShot = Time.time + 1 / fireRate;
+            shoot();
+        }
         
     }
 
@@ -52,5 +52,6 @@ public class PlayerAimWeapon : MonoBehaviour
             Destroy(bulletIns, 3f);
         }
     }
+    
 }
 

@@ -75,4 +75,13 @@ public class PlayerController : MonoBehaviour
     {
         cam.transform.position = Vector3.Lerp(cam.transform.position, transform.position + offset, interpolation);
     }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag.Equals("Bullet"))
+        {
+            Destroy(col.gameObject);
+            Destroy(gameObject);
+        }
+    }
 }
