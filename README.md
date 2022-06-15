@@ -1,2 +1,2 @@
-# 2DPlatformShooter
-My first ever Unity project using selfmade assets
+# "2DPlatformShooter"
+My first ever Unity project using selfmade assets!
